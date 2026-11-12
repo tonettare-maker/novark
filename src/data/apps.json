@@ -8,6 +8,10 @@
     "icon": "assets/apps/familykeep/icon-256.webp",
     "screenshots": ["1.webp", "2.webp", "3.webp", "4.webp"],
     "privacySource": "familykeep-privacy.html",
+    "testing": {
+      "group": "https://groups.google.com/g/familykeep-testers",
+      "optin": "https://play.google.com/apps/testing/com.novark.familykeep"
+    },
     "tagline": {
       "de": "Fristen, Verträge und Dokumente der Familie im Blick.",
       "en": "Your family's deadlines, contracts and documents in one place.",

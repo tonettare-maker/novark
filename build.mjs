@@ -296,7 +296,7 @@ ${divider}
   ${chevrons}
 </section>
 <section class="section"><div class="wrap narrow"><p class="intro">${app.description[lang]}</p></div></section>
-${app.status === 'testing' ? `<section class="section tight"><div class="wrap"><div class="callout" style="--accent:${app.accent}"><div><h2>${t.app.testingTitle}</h2><p>${t.app.testingText}</p></div><a class="btn btn-primary" href="${mailto(fill(t.app.testingSubject, app))}">${icon('mail')}${t.app.testingBtn}</a></div></div></section>` : ''}
+${app.status === 'testing' ? `<section class="section tight"><div class="wrap"><div class="callout" style="--accent:${app.accent}"><div><h2>${t.app.testingTitle}</h2><p>${t.app.testingText}</p></div><a class="btn btn-primary" href="${app.testing ? u(`${lang}/apps/${app.id}/test/`) : mailto(fill(t.app.testingSubject, app))}">${t.app.testingBtn}${icon('arrow')}</a></div></div></section>` : ''}
 <section class="section"><div class="wrap">
   <h2 class="section-title">${t.app.features}</h2>
   <ul class="features" style="--accent:${app.accent}">
@@ -322,6 +322,43 @@ ${app.status === 'testing' ? `<section class="section tight"><div class="wrap"><
   </div>
 </div></section>`,
     });
+
+    if (app.testing) {
+      const tt = t.test;
+      const links = [app.testing.group, app.testing.optin, `https://play.google.com/store/apps/details?id=${app.package}`];
+      add(lang, `apps/${app.id}/test/`, {
+        title: fill(tt.title, app), desc: fill(tt.desc, app), pageClass: 'test-page',
+        body: `
+<section class="app-hero" style="--accent:${app.accent}">
+  <div class="wrap app-hero-inner">
+    <img class="app-hero-icon" src="${u(app.icon)}" alt="${app.name}" width="120" height="120">
+    <div>
+      ${statusBadge(lang, app.status)}
+      <h1>${fill(tt.title, app)}</h1>
+      <p class="lead">${fill(tt.lead, app)}</p>
+    </div>
+  </div>
+  ${chevrons}
+</section>
+<section class="section"><div class="wrap narrow">
+  <div class="card need">
+    <h2>${icon('check')} ${tt.needTitle}</h2>
+    <ul class="checklist">${tt.need.map((n) => `<li>${icon('check')}<span>${n}</span></li>`).join('')}</ul>
+  </div>
+  <ol class="test-steps" style="--accent:${app.accent}">
+    ${tt.steps.map(([h, p, btn], i) => `<li class="test-step">
+      <span class="test-num" aria-hidden="true">${i + 1}</span>
+      <div><h2>${h}</h2><p>${fill(p, app)}</p>
+      <a class="btn ${i === 2 ? 'btn-play' : 'btn-primary'}" href="${links[i]}" target="_blank" rel="noopener">${i === 2 ? playIcon : ''}${btn}${i === 2 ? '' : icon('arrow')}</a></div>
+    </li>`).join('')}
+  </ol>
+  <p class="hint">${tt.hint}</p>
+  <div class="callout" style="--accent:${app.accent}"><div><h2>${tt.keepTitle}</h2><p>${tt.keep}</p></div></div>
+  <p class="feedback">${tt.feedback} <a href="${mailto('Feedback ' + app.name)}">${cfg.email}</a></p>
+  <p><a class="link-arrow back" href="${u(`${lang}/apps/${app.id}/`)}">${icon('left')} ${fill(t.del.back, app)}</a></p>
+</div></section>`,
+      });
+    }
 
     add(lang, `apps/${app.id}/delete-account/`, {
       title: fill(t.del.title, app), desc: fill(t.del.desc, app),

@@ -42,6 +42,22 @@ export const T = {
       legal: 'Rechtliches', privacy: 'Datenschutzerklärung', del: 'Konto löschen', support: 'Support',
       prev: 'Vorheriges Bild', next: 'Nächstes Bild', shot: 'Screenshot'
     },
+    test: {
+      title: '{app} testen', desc: 'In 3 Schritten Tester für {app} werden.',
+      lead: 'Hilf uns, {app} vor dem Start zu testen. Es dauert 2 Minuten – danke!',
+      needTitle: 'Was du brauchst',
+      need: ['Ein Android-Handy', 'Ein Google-Konto (Gmail) – dasselbe, das im Play Store auf deinem Handy angemeldet ist', 'Die App 14 Tage lang installiert lassen'],
+      steps: [
+        ['Der Testgruppe beitreten', 'Öffne die Google-Gruppe und tippe auf <b>„Gruppe beitreten“</b>. Melde dich mit deinem Gmail-Konto an, falls gefragt.', 'Testgruppe öffnen'],
+        ['Tester werden', 'Öffne die Testseite von Google Play und tippe auf <b>„Werde Tester“</b>.', 'Tester werden'],
+        ['App installieren', 'Installiere {app} aus dem Play Store, öffne sie und registriere dich ganz normal mit deiner E-Mail-Adresse.', 'Im Play Store öffnen']
+      ],
+      hint: 'Zeigt Schritt 2 oder 3 eine Fehlermeldung? Dann ist der Beitritt zur Gruppe noch nicht angekommen oder der Test wird gerade von Google freigegeben – bitte versuch es ein paar Stunden später noch einmal.',
+      keepTitle: 'Wichtig: 14 Tage dabei bleiben',
+      keep: 'Google gibt die App erst frei, wenn mindestens 12 Tester sie 14 Tage lang installiert haben. Bitte deinstalliere sie in dieser Zeit nicht und öffne sie ab und zu.',
+      feedback: 'Fehler gefunden oder eine Idee? Schreib uns:',
+      cta: 'Jetzt testen'
+    },
     del: {
       title: '{app}: Konto und Daten löschen',
       desc: 'So löschst du dein {app}-Konto und alle zugehörigen Daten.',
@@ -135,6 +151,22 @@ export const T = {
       legal: 'Legal', privacy: 'Privacy policy', del: 'Delete account', support: 'Support',
       prev: 'Previous image', next: 'Next image', shot: 'Screenshot'
     },
+    test: {
+      title: 'Test {app}', desc: 'Become a {app} tester in 3 steps.',
+      lead: 'Help us test {app} before launch. It takes 2 minutes – thank you!',
+      needTitle: 'What you need',
+      need: ['An Android phone', 'A Google account (Gmail) – the same one signed in to the Play Store on your phone', 'Keep the app installed for 14 days'],
+      steps: [
+        ['Join the test group', 'Open the Google Group and tap <b>“Join group”</b>. Sign in with your Gmail account if asked.', 'Open test group'],
+        ['Become a tester', 'Open the Google Play testing page and tap <b>“Become a tester”</b>.', 'Become a tester'],
+        ['Install the app', 'Install {app} from the Play Store, open it and sign up normally with your email address.', 'Open in Play Store']
+      ],
+      hint: "Does step 2 or 3 show an error? Then your group membership hasn't arrived yet, or Google is still approving the test – please try again a few hours later.",
+      keepTitle: 'Important: stay for 14 days',
+      keep: 'Google only releases the app once at least 12 testers have kept it installed for 14 days. Please do not uninstall it during that time, and open it now and then.',
+      feedback: 'Found a bug or have an idea? Write to us:',
+      cta: 'Test now'
+    },
     del: {
       title: '{app}: delete account and data',
       desc: 'How to delete your {app} account and all associated data.',
@@ -227,6 +259,22 @@ export const T = {
       testingBtn: 'Bëhu testues', testingSubject: 'Testues për {app}',
       legal: 'Ligjore', privacy: 'Politika e privatësisë', del: 'Fshi llogarinë', support: 'Ndihma',
       prev: 'Fotoja e mëparshme', next: 'Fotoja tjetër', shot: 'Pamje ekrani'
+    },
+    test: {
+      title: 'Testo {app}', desc: 'Bëhu testues i {app} në 3 hapa.',
+      lead: 'Na ndihmo ta testojmë {app} para publikimit. Zgjat 2 minuta – faleminderit!',
+      needTitle: 'Çfarë të duhet',
+      need: ['Një telefon Android', 'Një llogari Google (Gmail) – e njëjta me të cilën je kyçur në Play Store në telefon', 'Ta mbash app-in të instaluar 14 ditë'],
+      steps: [
+        ['Bashkohu në grupin e testuesve', 'Hap grupin Google dhe prek <b>„Bashkohu në grup“</b> (Join group). Kyçu me Gmail-in tënd nëse të kërkohet.', 'Hap grupin e testit'],
+        ['Bëhu testues', 'Hap faqen e testit në Google Play dhe prek <b>„Bëhu testues“</b> (Become a tester).', 'Bëhu testues'],
+        ['Instalo app-in', 'Instalo {app} nga Play Store, hape dhe regjistrohu normalisht me adresën tënde email.', 'Hap në Play Store']
+      ],
+      hint: 'Hapi 2 ose 3 të tregon gabim? Atëherë anëtarësimi në grup s’ka mbërritur ende, ose Google po e aprovon testin – provo përsëri pas disa orësh.',
+      keepTitle: 'E rëndësishme: qëndro 14 ditë',
+      keep: 'Google e lejon app-in vetëm kur të paktën 12 testues e kanë mbajtur të instaluar 14 ditë. Të lutem mos e çinstalo gjatë kësaj kohe dhe hape herë pas here.',
+      feedback: 'Gjete një gabim ose ke një ide? Na shkruaj:',
+      cta: 'Testo tani'
     },
     del: {
       title: '{app}: fshi llogarinë dhe të dhënat',
