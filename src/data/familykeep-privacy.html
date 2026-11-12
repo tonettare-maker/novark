@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<meta name="theme-color" content="#1c7d64" />
+<link rel="icon" type="image/png" href="./icons/icon-192.png" />
+<title>FamilyKeep – Privacy Policy</title>
+<style>
+  :root { --bg:#f3f4f6; --card:#ffffff; --text:#0f172a; --muted:#64748b; --line:#e2e8f0; --brand:#1c7d64; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#020617; --card:#1e293b; --text:#f1f5f9; --muted:#94a3b8; --line:#334155; --brand:#5eead4; }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    padding: calc(16px + var(--safe-area-inset-top, env(safe-area-inset-top, 0px))) 16px
+             calc(32px + var(--safe-area-inset-bottom, env(safe-area-inset-bottom, 0px)));
+  }
+  main { max-width: 720px; margin: 0 auto; }
+  .top { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 16px; }
+  .top a { color: var(--brand); font-weight: 600; text-decoration: none; }
+  .langs { display: flex; gap: 4px; }
+  .langs button {
+    border: 0; background: transparent; color: var(--muted); font: inherit; font-size: 13px; font-weight: 700;
+    padding: 6px 10px; border-radius: 8px; cursor: pointer;
+  }
+  .langs button[aria-pressed="true"] { background: #1c7d64; color: #fff; }
+  article { background: var(--card); border: 1px solid var(--line); border-radius: 18px; padding: 22px 20px; }
+  h1 { font-size: 24px; line-height: 1.25; margin: 0 0 4px; }
+  h2 { font-size: 17px; margin: 26px 0 6px; }
+  p, li { color: var(--text); }
+  ul { padding-left: 20px; margin: 6px 0; }
+  .muted { color: var(--muted); font-size: 14px; }
+  .box { border: 1px solid var(--line); border-radius: 12px; padding: 12px 14px; margin: 8px 0; }
+  a { color: var(--brand); }
+  [data-lang] { display: none; }
+  [data-lang].on { display: block; }
+</style>
+</head>
+<body>
+<main>
+  <div class="top">
+    <a href="./" id="back">← FamilyKeep</a>
+    <div class="langs" role="group" aria-label="Language">
+      <button data-set="de">DE</button><button data-set="en">EN</button><button data-set="sq">SQ</button>
+    </div>
+  </div>
+
+  <article>
+    <!-- ============================== DEUTSCH ============================== -->
+    <div data-lang="de">
+      <h1>Datenschutzerklärung</h1>
+      <p class="muted">FamilyKeep · Stand: <span class="k-datum"></span></p>
+
+      <h2>1. Verantwortlicher</h2>
+      <div class="box"><span class="k-name"></span><br><span class="k-adresse"></span><br>E-Mail: <a class="k-mail"></a></div>
+      <p>FamilyKeep ist eine App der Marke Novark.</p>
+
+      <h2>2. Welche Daten wir verarbeiten</h2>
+      <ul>
+        <li><b>Kontodaten:</b> deine E-Mail-Adresse und dein Passwort (das Passwort wird von Firebase nur verschlüsselt als Hash gespeichert; wir können es nicht lesen).</li>
+        <li><b>Deine Inhalte:</b> Einträge (Bezeichnung, Kategorie, Datum, Uhrzeit, Betrag, Notiz), Fotos von Dokumenten, die du hinzufügst, sowie Namen und Farben der Familienmitglieder.</li>
+        <li><b>Technische Daten:</b> beim Verbinden mit den Servern fallen IP-Adresse, Zeitpunkt und Geräte-/App-Informationen an.</li>
+        <li><b>Nur auf deinem Gerät:</b> Sprache, Darstellung und Vorwarnzeiten sowie die geplanten Erinnerungen.</li>
+      </ul>
+      <p>Deine Inhalte können sensible Angaben enthalten (z. B. Ausweise oder Gesundheitstermine). Du entscheidest selbst, was du einträgst.</p>
+
+      <h2>3. Zweck und Rechtsgrundlage</h2>
+      <p>Wir verarbeiten die Daten ausschließlich, um dir die App bereitzustellen: Anmeldung, Speicherung, Synchronisierung zwischen deinen Geräten und Erinnerungen. Rechtsgrundlage ist die Vertragserfüllung (Art. 6 Abs. 1 lit. b DSGVO). Soweit du besondere Kategorien von Daten einträgst (z. B. Gesundheitsdaten), geschieht dies auf Grundlage deiner Einwilligung (Art. 9 Abs. 2 lit. a DSGVO), die du jederzeit durch Löschen der Einträge widerrufen kannst.</p>
+
+      <h2>4. Keine Werbung, kein Tracking</h2>
+      <p>FamilyKeep enthält keine Werbung, keine Analyse- oder Tracking-Dienste. Wir verkaufen keine Daten und geben sie nicht zu Werbezwecken weiter.</p>
+
+      <h2>5. Dienstleister</h2>
+      <ul>
+        <li><b>Google Firebase</b> (Google Ireland Limited, Irland; Google LLC, USA): Anmeldung (Firebase Authentication) und Datenbank (Cloud Firestore). Dort werden Konto und Inhalte gespeichert. Eine Übermittlung in die USA ist möglich; sie erfolgt auf Grundlage des EU-US Data Privacy Framework bzw. von Standardvertragsklauseln.</li>
+        <li><b>jsDelivr</b> (CDN): Für die automatische Datumserkennung lädt die App beim ersten Mal Erkennungsdateien herunter; dabei wird deine IP-Adresse übertragen. Das Foto selbst wird für die Erkennung <b>nicht</b> hochgeladen – sie läuft auf deinem Gerät.</li>
+        <li><b>GitHub Pages</b> (GitHub Inc., USA): liefert die Web-Version und diese Seite aus; dabei wird die IP-Adresse verarbeitet.</li>
+      </ul>
+
+      <h2>6. Berechtigungen</h2>
+      <ul>
+        <li><b>Benachrichtigungen / Wecker &amp; Erinnerungen:</b> um dich pünktlich zu erinnern. Erinnerungen werden lokal auf dem Gerät geplant.</li>
+        <li><b>Kamera / Fotos:</b> nur, wenn du selbst ein Foto aufnimmst oder auswählst.</li>
+      </ul>
+
+      <h2>7. Gemeinsames Familienkonto</h2>
+      <p>Jede Person, die die Zugangsdaten deines Kontos kennt, sieht alle darin gespeicherten Daten. Gib E-Mail und Passwort nur an Personen weiter, denen du vertraust.</p>
+
+      <h2>8. Sicherheit</h2>
+      <p>Die Übertragung erfolgt verschlüsselt (TLS); die Daten werden bei Google verschlüsselt gespeichert. Zugriffsregeln stellen sicher, dass nur das angemeldete Konto seine Daten lesen kann. Die Daten sind nicht Ende-zu-Ende-verschlüsselt.</p>
+
+      <h2>9. Speicherdauer und Löschung</h2>
+      <p>Wir speichern deine Daten, bis du sie löschst. Du kannst einzelne Einträge jederzeit löschen. <b>Konto und alle Daten löschen:</b> in der App unter <i>Einstellungen → Konto &amp; Synchronisierung → „Konto und alle Daten löschen“</i>. Die Daten werden sofort entfernt. Alternativ genügt eine E-Mail von der Adresse deines Kontos an <a class="k-mail"></a>; wir löschen dann innerhalb von 30 Tagen.</p>
+
+      <h2>10. Deine Rechte</h2>
+      <p>Du hast das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit (in der App: <i>Einstellungen → Backup exportieren</i>) und Widerspruch. Außerdem kannst du dich bei einer Datenschutz-Aufsichtsbehörde beschweren.</p>
+
+      <h2>11. Kinder</h2>
+      <p>Die App richtet sich nicht an Kinder unter 16 Jahren.</p>
+
+      <h2>12. Änderungen</h2>
+      <p>Wir passen diese Erklärung an, wenn sich die App ändert. Es gilt die hier veröffentlichte Fassung.</p>
+    </div>
+
+    <!-- ============================== ENGLISH ============================== -->
+    <div data-lang="en">
+      <h1>Privacy Policy</h1>
+      <p class="muted">FamilyKeep · Last updated: <span class="k-datum"></span></p>
+
+      <h2>1. Controller</h2>
+      <div class="box"><span class="k-name"></span><br><span class="k-adresse"></span><br>Email: <a class="k-mail"></a></div>
+      <p>FamilyKeep is an app published under the Novark brand.</p>
+
+      <h2>2. What data we process</h2>
+      <ul>
+        <li><b>Account data:</b> your email address and password (Firebase stores the password only as an encrypted hash; we cannot read it).</li>
+        <li><b>Your content:</b> entries (name, category, date, time, amount, note), photos of documents you add, and the names and colours of family members.</li>
+        <li><b>Technical data:</b> when the app connects to the servers, IP address, time and device/app information are processed.</li>
+        <li><b>On your device only:</b> language, appearance and advance-notice settings, and the scheduled reminders.</li>
+      </ul>
+      <p>Your content may include sensitive information (for example ID documents or health appointments). You decide what you enter.</p>
+
+      <h2>3. Purpose and legal basis</h2>
+      <p>We process the data solely to provide the app: sign-in, storage, sync between your devices and reminders. The legal basis is performance of a contract (Art. 6(1)(b) GDPR). Where you enter special categories of data (such as health data), this is based on your consent (Art. 9(2)(a) GDPR), which you can withdraw at any time by deleting the entries.</p>
+
+      <h2>4. No ads, no tracking</h2>
+      <p>FamilyKeep contains no advertising and no analytics or tracking services. We do not sell data or share it for advertising.</p>
+
+      <h2>5. Service providers</h2>
+      <ul>
+        <li><b>Google Firebase</b> (Google Ireland Limited, Ireland; Google LLC, USA): sign-in (Firebase Authentication) and database (Cloud Firestore). Your account and content are stored there. Data may be transferred to the USA under the EU-US Data Privacy Framework or standard contractual clauses.</li>
+        <li><b>jsDelivr</b> (CDN): for automatic date detection the app downloads recognition files the first time; your IP address is transmitted in the process. The photo itself is <b>not</b> uploaded for detection – it runs on your device.</li>
+        <li><b>GitHub Pages</b> (GitHub Inc., USA): serves the web version and this page; your IP address is processed.</li>
+      </ul>
+
+      <h2>6. Permissions</h2>
+      <ul>
+        <li><b>Notifications / Alarms &amp; reminders:</b> to remind you on time. Reminders are scheduled locally on the device.</li>
+        <li><b>Camera / photos:</b> only when you take or choose a photo yourself.</li>
+      </ul>
+
+      <h2>7. Shared family account</h2>
+      <p>Anyone who knows your account's sign-in details can see all data stored in it. Share the email and password only with people you trust.</p>
+
+      <h2>8. Security</h2>
+      <p>Data is encrypted in transit (TLS) and stored encrypted at Google. Access rules ensure that only the signed-in account can read its data. The data is not end-to-end encrypted.</p>
+
+      <h2>9. Retention and deletion</h2>
+      <p>We keep your data until you delete it. You can delete individual entries at any time. <b>Delete account and all data:</b> in the app under <i>Settings → Account &amp; sync → “Delete account and all data”</i>. The data is removed immediately. Alternatively, send an email from your account's address to <a class="k-mail"></a>; we will delete it within 30 days.</p>
+
+      <h2>10. Your rights</h2>
+      <p>You have the right to access, rectification, erasure, restriction of processing, data portability (in the app: <i>Settings → Export backup</i>) and objection. You may also lodge a complaint with a data protection supervisory authority.</p>
+
+      <h2>11. Children</h2>
+      <p>The app is not directed at children under 16.</p>
+
+      <h2>12. Changes</h2>
+      <p>We update this policy when the app changes. The version published here applies.</p>
+    </div>
+
+    <!-- ============================== SHQIP ============================== -->
+    <div data-lang="sq">
+      <h1>Politika e privatësisë</h1>
+      <p class="muted">FamilyKeep · Përditësuar më: <span class="k-datum"></span></p>
+
+      <h2>1. Përgjegjësi</h2>
+      <div class="box"><span class="k-name"></span><br><span class="k-adresse"></span><br>Email: <a class="k-mail"></a></div>
+      <p>FamilyKeep është një app i markës Novark.</p>
+
+      <h2>2. Çfarë të dhënash përpunojmë</h2>
+      <ul>
+        <li><b>Të dhënat e llogarisë:</b> email-i dhe fjalëkalimi yt (fjalëkalimi ruhet nga Firebase vetëm i koduar si hash; ne nuk mund ta lexojmë).</li>
+        <li><b>Përmbajtja jote:</b> shënimet (emërtimi, kategoria, data, ora, shuma, shënimi), fotot e dokumenteve që shton, si dhe emrat dhe ngjyrat e anëtarëve të familjes.</li>
+        <li><b>Të dhëna teknike:</b> kur app-i lidhet me serverët përpunohen adresa IP, koha dhe informacione për pajisjen/app-in.</li>
+        <li><b>Vetëm në pajisjen tënde:</b> gjuha, pamja, ditët e paralajmërimit dhe kujtesat e planifikuara.</li>
+      </ul>
+      <p>Përmbajtja jote mund të ketë të dhëna të ndjeshme (p.sh. dokumente identiteti ose termine shëndetësore). Ti vendos vetë çfarë shënon.</p>
+
+      <h2>3. Qëllimi dhe baza ligjore</h2>
+      <p>I përpunojmë të dhënat vetëm për të të ofruar app-in: kyçjen, ruajtjen, sinkronizimin mes pajisjeve të tua dhe kujtesat. Baza ligjore është përmbushja e kontratës (neni 6(1)(b) GDPR). Kur shënon kategori të veçanta të dhënash (p.sh. shëndetësore), kjo bëhet me pëlqimin tënd (neni 9(2)(a) GDPR), të cilin mund ta tërheqësh në çdo kohë duke i fshirë shënimet.</p>
+
+      <h2>4. Pa reklama, pa gjurmim</h2>
+      <p>FamilyKeep nuk ka reklama dhe as shërbime analitike ose gjurmimi. Nuk shesim të dhëna dhe nuk i ndajmë për reklama.</p>
+
+      <h2>5. Ofruesit e shërbimeve</h2>
+      <ul>
+        <li><b>Google Firebase</b> (Google Ireland Limited, Irlandë; Google LLC, SHBA): kyçja (Firebase Authentication) dhe baza e të dhënave (Cloud Firestore). Aty ruhen llogaria dhe përmbajtja. Të dhënat mund të transferohen në SHBA në bazë të EU-US Data Privacy Framework ose klauzolave standarde kontraktuale.</li>
+        <li><b>jsDelivr</b> (CDN): për njohjen automatike të datës app-i shkarkon herën e parë skedarët e njohjes; gjatë kësaj transmetohet adresa jote IP. Vetë fotoja <b>nuk</b> ngarkohet për njohjen – ajo bëhet në pajisjen tënde.</li>
+        <li><b>GitHub Pages</b> (GitHub Inc., SHBA): shërben versionin web dhe këtë faqe; gjatë kësaj përpunohet adresa IP.</li>
+      </ul>
+
+      <h2>6. Lejet</h2>
+      <ul>
+        <li><b>Njoftimet / Alarmet dhe kujtesat:</b> për të të kujtuar në kohë. Kujtesat planifikohen lokalisht në pajisje.</li>
+        <li><b>Kamera / fotot:</b> vetëm kur ti vetë bën ose zgjedh një foto.</li>
+      </ul>
+
+      <h2>7. Llogaria e përbashkët familjare</h2>
+      <p>Kushdo që di të dhënat e kyçjes së llogarisë sate sheh gjithçka të ruajtur në të. Jepua email-in dhe fjalëkalimin vetëm personave që u beson.</p>
+
+      <h2>8. Siguria</h2>
+      <p>Transmetimi bëhet i koduar (TLS) dhe të dhënat ruhen të koduara te Google. Rregullat e aksesit sigurojnë që vetëm llogaria e kyçur t'i lexojë të dhënat e veta. Të dhënat nuk janë të koduara nga skaji në skaj (end-to-end).</p>
+
+      <h2>9. Kohëzgjatja e ruajtjes dhe fshirja</h2>
+      <p>I ruajmë të dhënat derisa t'i fshish. Shënimet e veçanta mund t'i fshish në çdo kohë. <b>Fshirja e llogarisë dhe e të gjitha të dhënave:</b> në app te <i>Cilësimet → Llogaria dhe sinkronizimi → „Fshi llogarinë dhe të gjitha të dhënat“</i>. Të dhënat hiqen menjëherë. Ose dërgo një email nga adresa e llogarisë sate te <a class="k-mail"></a>; i fshijmë brenda 30 ditësh.</p>
+
+      <h2>10. Të drejtat e tua</h2>
+      <p>Ke të drejtën e aksesit, korrigjimit, fshirjes, kufizimit të përpunimit, bartjes së të dhënave (në app: <i>Cilësimet → Eksporto backup</i>) dhe kundërshtimit. Mund të ankohesh edhe te autoriteti mbikëqyrës për mbrojtjen e të dhënave.</p>
+
+      <h2>11. Fëmijët</h2>
+      <p>App-i nuk u drejtohet fëmijëve nën 16 vjeç.</p>
+
+      <h2>12. Ndryshimet</h2>
+      <p>E përditësojmë këtë politikë kur ndryshon app-i. Vlen versioni i publikuar këtu.</p>
+    </div>
+  </article>
+</main>
+
+<script>
+  // ==========================================================================
+  // >>> HIER DIE ANGABEN DES VERANTWORTLICHEN EINTRAGEN (einmal, gilt für alle Sprachen) <<<
+  var KONTAKT = {
+    name: 'Tonet Tare',
+    adresse: '',
+    email: 'novark.app@gmail.com',
+    datum: '10.11.2026',
+  };
+  // ==========================================================================
+  function alle(sel, fn) { Array.prototype.forEach.call(document.querySelectorAll(sel), fn); }
+  alle('.k-name', function (e) { e.textContent = KONTAKT.name; });
+  alle('.k-adresse', function (e) { e.textContent = KONTAKT.adresse; });
+  alle('.k-datum', function (e) { e.textContent = KONTAKT.datum; });
+  alle('.k-mail', function (e) { e.textContent = KONTAKT.email; e.href = 'mailto:' + KONTAKT.email; });
+
+  var TITEL = { de: 'FamilyKeep – Datenschutzerklärung', en: 'FamilyKeep – Privacy Policy', sq: 'FamilyKeep – Politika e privatësisë' };
+  function setze(l) {
+    if (!TITEL[l]) l = 'en';
+    alle('[data-lang]', function (e) { e.classList.toggle('on', e.getAttribute('data-lang') === l); });
+    alle('[data-set]', function (b) { b.setAttribute('aria-pressed', String(b.getAttribute('data-set') === l)); });
+    document.documentElement.lang = l;
+    document.title = TITEL[l];
+  }
+  alle('[data-set]', function (b) { b.addEventListener('click', function () { setze(b.getAttribute('data-set')); }); });
+  var wunsch = new URLSearchParams(location.search).get('lang') || (navigator.language || 'en').slice(0, 2).toLowerCase();
+  setze(wunsch);
+</script>
+</body>
+</html>

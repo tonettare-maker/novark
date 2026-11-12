@@ -1,0 +1,48 @@
+[
+  {
+    "id": "familykeep",
+    "name": "FamilyKeep",
+    "package": "com.novark.familykeep",
+    "status": "testing",
+    "accent": "#1c7d64",
+    "icon": "assets/apps/familykeep/icon-256.webp",
+    "screenshots": ["1.webp", "2.webp", "3.webp", "4.webp"],
+    "privacySource": "familykeep-privacy.html",
+    "tagline": {
+      "de": "Fristen, Verträge und Dokumente der Familie im Blick.",
+      "en": "Your family's deadlines, contracts and documents in one place.",
+      "sq": "Afatet, kontratat dhe dokumentet e familjes në një vend."
+    },
+    "description": {
+      "de": "FamilyKeep erinnert dich rechtzeitig an alles, was in einer Familie gern untergeht: Kündigungsfristen, ablaufende Ausweise, Versicherungen, TÜV, Arzttermine und Zahlungen. Alles an einem Ort – geteilt mit der Familie, ohne Werbung und ohne Tracking.",
+      "en": "FamilyKeep reminds you in time of everything that tends to slip through the cracks in a family: cancellation deadlines, expiring IDs, insurance, car inspections, doctor's appointments and payments. All in one place – shared with your family, with no ads and no tracking.",
+      "sq": "FamilyKeep të kujton me kohë gjithçka që në një familje harrohet lehtë: afatet e anulimit të kontratave, dokumentet që skadojnë, sigurimet, kontrollin e makinës, terminet te mjeku dhe pagesat. Gjithçka në një vend – e ndarë me familjen, pa reklama dhe pa gjurmim."
+    },
+    "features": {
+      "de": [
+        ["Fristen & Termine", "Verträge, Ausweise, Versicherungen, Termine – sortiert nach Kategorie und Familienmitglied."],
+        ["Pünktliche Erinnerungen", "Exakte Benachrichtigungen mit frei wählbarer Vorwarnzeit, auch nach einem Neustart."],
+        ["Dokumente als Foto", "Fotografiere Verträge oder Ausweise und hab sie immer griffbereit."],
+        ["Ein Konto für die Familie", "Alle sehen dieselben Einträge – synchronisiert auf jedem Gerät."],
+        ["Kosten im Überblick", "Statistiken zeigen, was Verträge und Abos im Jahr kosten."],
+        ["Deine Daten, deine Regeln", "Backup-Export, Konto-Löschung per Tipp, keine Werbung, kein Tracking."]
+      ],
+      "en": [
+        ["Deadlines & appointments", "Contracts, IDs, insurance, appointments – sorted by category and family member."],
+        ["Reminders on time", "Exact notifications with a lead time you choose, even after a restart."],
+        ["Documents as photos", "Snap contracts or IDs and keep them close at hand."],
+        ["One account for the family", "Everyone sees the same entries – synced on every device."],
+        ["Costs at a glance", "Statistics show what contracts and subscriptions cost per year."],
+        ["Your data, your rules", "Backup export, one-tap account deletion, no ads, no tracking."]
+      ],
+      "sq": [
+        ["Afate dhe termine", "Kontrata, dokumente, sigurime, termine – të renditura sipas kategorisë dhe anëtarit të familjes."],
+        ["Kujtesa në kohë", "Njoftime të sakta me paralajmërim sa ta zgjedhësh vetë, edhe pas rinisjes së telefonit."],
+        ["Dokumente si foto", "Fotografo kontratat ose dokumentet dhe mbaji gjithmonë pranë."],
+        ["Një llogari për familjen", "Të gjithë shohin të njëjtat shënime – të sinkronizuara në çdo pajisje."],
+        ["Kostot me një shikim", "Statistikat tregojnë sa kushtojnë kontratat dhe abonimet në vit."],
+        ["Të dhënat e tua, rregullat e tua", "Eksport i backup-it, fshirje e llogarisë me një prekje, pa reklama, pa gjurmim."]
+      ]
+    }
+  }
+]
