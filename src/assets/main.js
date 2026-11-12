@@ -60,6 +60,11 @@
     if (has) nf.forEach(function (n) { n.hidden = n.getAttribute('data-nf') !== want; });
   }
 
+  // Teaser-Video: bei reduzierter Bewegung anhalten
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    document.querySelectorAll('[data-teaser]').forEach(function (v) { v.removeAttribute('autoplay'); try { v.pause(); } catch (e) {} });
+  }
+
   // Einblenden beim Scrollen
   if ('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
     var els = document.querySelectorAll('.value, .app-card, .featured, .features li, .card, .faq details, .link-tiles a, .callout');

@@ -37,11 +37,12 @@ export const T = {
       features: 'Was die App kann', screens: 'Einblicke', get: 'Jetzt bei Google Play',
       soonBtn: 'Bald bei Google Play',
       testingTitle: 'Tester gesucht!',
-      testingText: 'Die App ist im geschlossenen Test. Du hast ein Android-Handy und möchtest sie vorab ausprobieren? Schreib uns deine Gmail-Adresse – du bekommst dann den Link zum Installieren.',
+      testingText: 'Die App ist im geschlossenen Test. Du hast ein Android-Handy und möchtest sie vorab ausprobieren? In 3 einfachen Schritten bist du dabei.',
       testingBtn: 'Tester werden', testingSubject: 'Tester für {app}',
       legal: 'Rechtliches', privacy: 'Datenschutzerklärung', del: 'Konto löschen', support: 'Support',
       prev: 'Vorheriges Bild', next: 'Nächstes Bild', shot: 'Screenshot'
     },
+    video: { title: 'Das Video', watch: 'Video ansehen', note: '', label: 'Werbevideo' },
     test: {
       title: '{app} testen', desc: 'In 3 Schritten Tester für {app} werden.',
       lead: 'Hilf uns, {app} vor dem Start zu testen. Es dauert 2 Minuten – danke!',
@@ -146,11 +147,12 @@ export const T = {
       features: 'What it does', screens: 'A closer look', get: 'Get it on Google Play',
       soonBtn: 'Coming soon to Google Play',
       testingTitle: 'Testers wanted!',
-      testingText: "The app is in closed testing. Have an Android phone and want to try it early? Send us your Gmail address and we'll send you the install link.",
+      testingText: "The app is in closed testing. Have an Android phone and want to try it early? You're in with 3 simple steps.",
       testingBtn: 'Become a tester', testingSubject: 'Tester for {app}',
       legal: 'Legal', privacy: 'Privacy policy', del: 'Delete account', support: 'Support',
       prev: 'Previous image', next: 'Next image', shot: 'Screenshot'
     },
+    video: { title: 'Watch the video', watch: 'Watch the video', note: '🇩🇪 Video in German', label: 'Promo video' },
     test: {
       title: 'Test {app}', desc: 'Become a {app} tester in 3 steps.',
       lead: 'Help us test {app} before launch. It takes 2 minutes – thank you!',
@@ -255,11 +257,12 @@ export const T = {
       features: 'Çfarë bën app-i', screens: 'Një vështrim nga afër', get: 'Shkarko në Google Play',
       soonBtn: 'Së shpejti në Google Play',
       testingTitle: 'Kërkojmë testues!',
-      testingText: 'App-i është në testim të mbyllur. Ke telefon Android dhe do ta provosh para të tjerëve? Na dërgo adresën Gmail – pastaj të dërgojmë linkun për ta instaluar.',
+      testingText: 'App-i është në testim të mbyllur. Ke telefon Android dhe do ta provosh para të tjerëve? Bëhesh testues me 3 hapa të thjeshtë.',
       testingBtn: 'Bëhu testues', testingSubject: 'Testues për {app}',
       legal: 'Ligjore', privacy: 'Politika e privatësisë', del: 'Fshi llogarinë', support: 'Ndihma',
       prev: 'Fotoja e mëparshme', next: 'Fotoja tjetër', shot: 'Pamje ekrani'
     },
+    video: { title: 'Shiko videon', watch: 'Shiko videon', note: '🇩🇪 Video në gjermanisht', label: 'Video promovuese' },
     test: {
       title: 'Testo {app}', desc: 'Bëhu testues i {app} në 3 hapa.',
       lead: 'Na ndihmo ta testojmë {app} para publikimit. Zgjat 2 minuta – faleminderit!',

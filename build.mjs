@@ -188,6 +188,14 @@ function appCard(lang, app, big = false) {
 </article>`;
 }
 
+function videoBlock(lang, app) {
+  const v = app.video, t = T[lang].video;
+  return `<figure class="video-phone">
+  <video controls preload="none" playsinline poster="${u(v.poster)}" width="360" height="640" aria-label="${app.name} – ${t.label}"><source src="${u(v.src)}" type="video/mp4"></video>
+  ${v.lang !== lang && t.note ? `<figcaption>${t.note}</figcaption>` : ''}
+</figure>`;
+}
+
 function pageHead(title, lead, eyebrow = '') {
   return `<section class="page-head"><div class="wrap">${eyebrow ? `<p class="eyebrow">${eyebrow}</p>` : ''}<h1>${title}</h1>${lead ? `<p class="lead">${lead}</p>` : ''}</div>${chevrons}</section>`;
 }
@@ -249,10 +257,14 @@ ${divider}
         <p class="muted">${featured.description[lang]}</p>
         <div class="actions">
           <a class="btn btn-primary" href="${u(`${lang}/apps/${featured.id}/`)}">${t.more}${icon('arrow')}</a>
-          <a class="btn btn-ghost" href="${u(lang + '/apps/')}">${t.home.allApps}</a>
+          ${featured.video ? `<a class="btn btn-ghost" href="${u(`${lang}/apps/${featured.id}/`)}#video">${playIcon}${t.video.watch}</a>` : `<a class="btn btn-ghost" href="${u(lang + '/apps/')}">${t.home.allApps}</a>`}
         </div>
       </div>
-      <div class="featured-phones" aria-hidden="true">
+      ${featured.video ? `<div class="featured-teaser"><a class="teaser-phone" href="${u(`${lang}/apps/${featured.id}/`)}#video" aria-label="${t.video.watch} – ${featured.name}">
+        <video class="teaser" data-teaser muted loop playsinline autoplay preload="metadata" poster="${u(featured.video.teaserPoster)}" width="270" height="480"><source src="${u(featured.video.teaser)}" type="video/mp4"></video>
+        <span class="teaser-play">${playIcon}</span>
+      </a></div>` : ''}
+      <div class="featured-phones" aria-hidden="true"${featured.video ? ' hidden' : ''}>
         <img class="phone p-back" src="${u(`assets/apps/${featured.id}/${lang}/${featured.screenshots[2]}`)}" alt="" width="270" height="480" loading="lazy">
         <img class="phone p-front" src="${u(`assets/apps/${featured.id}/${lang}/${featured.screenshots[0]}`)}" alt="" width="270" height="480" loading="lazy">
       </div>
@@ -295,7 +307,9 @@ ${divider}
   </div>
   ${chevrons}
 </section>
-<section class="section"><div class="wrap narrow"><p class="intro">${app.description[lang]}</p></div></section>
+${app.video
+  ? `<section class="section" id="video"><div class="wrap intro-grid"><div><p class="eyebrow">${t.video.title}</p><p class="intro">${app.description[lang]}</p></div>${videoBlock(lang, app)}</div></section>`
+  : `<section class="section"><div class="wrap narrow"><p class="intro">${app.description[lang]}</p></div></section>`}
 ${app.status === 'testing' ? `<section class="section tight"><div class="wrap"><div class="callout" style="--accent:${app.accent}"><div><h2>${t.app.testingTitle}</h2><p>${t.app.testingText}</p></div><a class="btn btn-primary" href="${app.testing ? u(`${lang}/apps/${app.id}/test/`) : mailto(fill(t.app.testingSubject, app))}">${t.app.testingBtn}${icon('arrow')}</a></div></div></section>` : ''}
 <section class="section"><div class="wrap">
   <h2 class="section-title">${t.app.features}</h2>
@@ -341,6 +355,7 @@ ${app.status === 'testing' ? `<section class="section tight"><div class="wrap"><
   ${chevrons}
 </section>
 <section class="section"><div class="wrap narrow">
+  ${app.video ? `<div class="test-video">${videoBlock(lang, app)}</div>` : ''}
   <div class="card need">
     <h2>${icon('check')} ${tt.needTitle}</h2>
     <ul class="checklist">${tt.need.map((n) => `<li>${icon('check')}<span>${n}</span></li>`).join('')}</ul>

@@ -8,6 +8,13 @@
     "icon": "assets/apps/familykeep/icon-256.webp",
     "screenshots": ["1.webp", "2.webp", "3.webp", "4.webp"],
     "privacySource": "familykeep-privacy.html",
+    "video": {
+      "src": "assets/apps/familykeep/video/familykeep-de.mp4",
+      "poster": "assets/apps/familykeep/video/poster.webp",
+      "teaser": "assets/apps/familykeep/video/teaser.mp4",
+      "teaserPoster": "assets/apps/familykeep/video/teaser-poster.webp",
+      "lang": "de"
+    },
     "testing": {
       "group": "https://groups.google.com/g/familykeep-testers",
       "optin": "https://play.google.com/apps/testing/com.novark.familykeep"
