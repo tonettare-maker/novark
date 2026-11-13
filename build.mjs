@@ -72,7 +72,7 @@ function loadPrivacy(app) {
     block = block
       .replace(/<span class="k-name"><\/span>/g, esc(k.name))
       // Postanschrift nur im Impressum (gesetzlich vorgeschrieben); hier nur ein Verweis
-      .replace(/<span class="k-adresse"><\/span>/g, `<a href="${u(`${l}/impressum/`)}">${T[l].impressum.addrRef}</a>`)
+      .replace(/<br>\s*<span class="k-adresse"><\/span>/g, cfg.address.length ? `<br><a href="${u(`${l}/impressum/`)}">${T[l].impressum.addrRef}</a>` : '')
       .replace(/<span class="k-datum"><\/span>/g, esc(k.datum))
       .replace(/<a class="k-mail"><\/a>/g, `<a href="mailto:${esc(k.email)}">${esc(k.email)}</a>`)
       .replace(/<h1>[^<]*<\/h1>/, '');
@@ -448,7 +448,7 @@ ${app.status === 'testing' ? `<section class="section tight"><div class="wrap"><
     body: `${pageHead(t.impressum.title)}
 <section class="section"><div class="wrap narrow prose">
   <h2>${t.impressum.heading}</h2>
-  <p>${esc(CONTACT.name)}<br>${cfg.address.map(esc).join('<br>')}</p>
+  <p>${esc(CONTACT.name)}${cfg.address.length ? '<br>' + cfg.address.map(esc).join('<br>') : ''}</p>
   <h2>${t.impressum.contact}</h2>
   <p>E-Mail: <a href="${mailto()}">${cfg.email}</a></p>
   <h2>${t.impressum.resp}</h2>

@@ -55,7 +55,7 @@
       <p class="muted">FamilyKeep · Stand: <span class="k-datum"></span></p>
 
       <h2>1. Verantwortlicher</h2>
-      <div class="box"><span class="k-name"></span><br><span class="k-adresse"></span><br>E-Mail: <a class="k-mail"></a></div>
+      <div class="box"><span class="k-name"></span><br>E-Mail: <a class="k-mail"></a></div>
       <p>FamilyKeep ist eine App der Marke Novark.</p>
 
       <h2>2. Welche Daten wir verarbeiten</h2>
@@ -111,7 +111,7 @@
       <p class="muted">FamilyKeep · Last updated: <span class="k-datum"></span></p>
 
       <h2>1. Controller</h2>
-      <div class="box"><span class="k-name"></span><br><span class="k-adresse"></span><br>Email: <a class="k-mail"></a></div>
+      <div class="box"><span class="k-name"></span><br>Email: <a class="k-mail"></a></div>
       <p>FamilyKeep is an app published under the Novark brand.</p>
 
       <h2>2. What data we process</h2>
@@ -167,7 +167,7 @@
       <p class="muted">FamilyKeep · Përditësuar më: <span class="k-datum"></span></p>
 
       <h2>1. Përgjegjësi</h2>
-      <div class="box"><span class="k-name"></span><br><span class="k-adresse"></span><br>Email: <a class="k-mail"></a></div>
+      <div class="box"><span class="k-name"></span><br>Email: <a class="k-mail"></a></div>
       <p>FamilyKeep është një app i markës Novark.</p>
 
       <h2>2. Çfarë të dhënash përpunojmë</h2>
@@ -224,21 +224,12 @@
   // >>> HIER DIE ANGABEN DES VERANTWORTLICHEN EINTRAGEN (einmal, gilt für alle Sprachen) <<<
   var KONTAKT = {
     name: 'Tonet Tare',
-    // Postanschrift steht nur im Impressum (gesetzlich vorgeschrieben), nicht hier
-    impressum: 'https://tonettare-maker.github.io/novark/',
     email: 'novark.app@gmail.com',
     datum: '10.11.2026',
   };
   // ==========================================================================
   function alle(sel, fn) { Array.prototype.forEach.call(document.querySelectorAll(sel), fn); }
   alle('.k-name', function (e) { e.textContent = KONTAKT.name; });
-  var ADR = { de: 'Postanschrift: siehe Impressum', en: 'Postal address: see legal notice', sq: 'Adresa postare: shih njoftimin ligjor' };
-  alle('.k-adresse', function (e) {
-    var box = e.closest('[data-lang]'), l = box ? box.getAttribute('data-lang') : 'en';
-    var a = document.createElement('a');
-    a.href = KONTAKT.impressum + l + '/impressum/'; a.textContent = ADR[l] || ADR.en; a.rel = 'noopener';
-    e.appendChild(a);
-  });
   alle('.k-datum', function (e) { e.textContent = KONTAKT.datum; });
   alle('.k-mail', function (e) { e.textContent = KONTAKT.email; e.href = 'mailto:' + KONTAKT.email; });
 
