@@ -71,7 +71,9 @@ function loadPrivacy(app) {
     block = block.replace(/<\/div>\s*$/, '');
     block = block
       .replace(/<span class="k-name"><\/span>/g, esc(k.name))
-      .replace(/<span class="k-adresse"><\/span>/g, esc(k.adresse))
+      // Adresse wird auf der Website bewusst nicht veröffentlicht (Wunsch des Inhabers)
+      .replace(/<br>\s*<span class="k-adresse"><\/span>/g, '')
+      .replace(/<span class="k-adresse"><\/span>/g, '')
       .replace(/<span class="k-datum"><\/span>/g, esc(k.datum))
       .replace(/<a class="k-mail"><\/a>/g, `<a href="mailto:${esc(k.email)}">${esc(k.email)}</a>`)
       .replace(/<h1>[^<]*<\/h1>/, '');
@@ -447,7 +449,7 @@ ${app.status === 'testing' ? `<section class="section tight"><div class="wrap"><
     body: `${pageHead(t.impressum.title)}
 <section class="section"><div class="wrap narrow prose">
   <h2>${t.impressum.heading}</h2>
-  <p>${esc(CONTACT.name)}<br>${esc(CONTACT.adresse).replace(', ', '<br>').replace(/, (?=[^,]*$)/, '<br>')}</p>
+  <p>${esc(CONTACT.name)}</p>
   <h2>${t.impressum.contact}</h2>
   <p>E-Mail: <a href="${mailto()}">${cfg.email}</a></p>
   <h2>${t.impressum.resp}</h2>
