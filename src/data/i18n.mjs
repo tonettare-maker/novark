@@ -107,7 +107,7 @@ export const T = {
     },
     impressum: {
       title: 'Impressum', desc: 'Impressum von Novark.',
-      heading: 'Angaben gemäß § 5 DDG', contact: 'Kontakt', resp: 'Verantwortlich für den Inhalt',
+      heading: 'Angaben gemäß § 5 DDG', addrRef: 'Postanschrift: siehe Impressum', contact: 'Kontakt', resp: 'Verantwortlich für den Inhalt',
       note: 'Novark ist die Marke, unter der die oben genannte Person Apps veröffentlicht.'
     },
     notFound: { title: 'Seite nicht gefunden', text: 'Diese Seite gibt es nicht (mehr). Vielleicht hilft dir einer dieser Links weiter:', home: 'Zur Startseite' }
@@ -217,7 +217,7 @@ export const T = {
     },
     impressum: {
       title: 'Legal notice', desc: 'Legal notice (Impressum) of Novark.',
-      heading: 'Information according to § 5 DDG (German law)', contact: 'Contact', resp: 'Responsible for content',
+      heading: 'Information according to § 5 DDG (German law)', addrRef: 'Postal address: see legal notice', contact: 'Contact', resp: 'Responsible for content',
       note: 'Novark is the brand under which the person named above publishes apps.'
     },
     notFound: { title: 'Page not found', text: "This page doesn't exist (anymore). Maybe one of these links helps:", home: 'Go to homepage' }
@@ -327,7 +327,7 @@ export const T = {
     },
     impressum: {
       title: 'Njoftim ligjor', desc: 'Njoftimi ligjor (Impressum) i Novark.',
-      heading: 'Të dhëna sipas § 5 DDG (ligji gjerman)', contact: 'Kontakti', resp: 'Përgjegjës për përmbajtjen',
+      heading: 'Të dhëna sipas § 5 DDG (ligji gjerman)', addrRef: 'Adresa postare: shih njoftimin ligjor', contact: 'Kontakti', resp: 'Përgjegjës për përmbajtjen',
       note: 'Novark është marka me të cilën personi i mësipërm publikon app-e.'
     },
     notFound: { title: 'Faqja nuk u gjet', text: 'Kjo faqe nuk ekziston (më). Ndoshta të ndihmon një nga këto linqe:', home: 'Te faqja kryesore' }

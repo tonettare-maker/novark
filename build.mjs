@@ -71,9 +71,8 @@ function loadPrivacy(app) {
     block = block.replace(/<\/div>\s*$/, '');
     block = block
       .replace(/<span class="k-name"><\/span>/g, esc(k.name))
-      // Adresse wird auf der Website bewusst nicht veröffentlicht (Wunsch des Inhabers)
-      .replace(/<br>\s*<span class="k-adresse"><\/span>/g, '')
-      .replace(/<span class="k-adresse"><\/span>/g, '')
+      // Postanschrift nur im Impressum (gesetzlich vorgeschrieben); hier nur ein Verweis
+      .replace(/<span class="k-adresse"><\/span>/g, `<a href="${u(`${l}/impressum/`)}">${T[l].impressum.addrRef}</a>`)
       .replace(/<span class="k-datum"><\/span>/g, esc(k.datum))
       .replace(/<a class="k-mail"><\/a>/g, `<a href="mailto:${esc(k.email)}">${esc(k.email)}</a>`)
       .replace(/<h1>[^<]*<\/h1>/, '');
@@ -445,11 +444,11 @@ ${app.status === 'testing' ? `<section class="section tight"><div class="wrap"><
 
   // Impressum
   add(lang, 'impressum/', {
-    title: t.impressum.title, desc: t.impressum.desc,
+    title: t.impressum.title, desc: t.impressum.desc, noindex: true,
     body: `${pageHead(t.impressum.title)}
 <section class="section"><div class="wrap narrow prose">
   <h2>${t.impressum.heading}</h2>
-  <p>${esc(CONTACT.name)}</p>
+  <p>${esc(CONTACT.name)}<br>${cfg.address.map(esc).join('<br>')}</p>
   <h2>${t.impressum.contact}</h2>
   <p>E-Mail: <a href="${mailto()}">${cfg.email}</a></p>
   <h2>${t.impressum.resp}</h2>
@@ -505,7 +504,7 @@ if(L.indexOf(l)<0)l='${cfg.defaultLang}';location.replace('${BASE}'+l+'/'+locati
 }
 
 // sitemap / robots / manifest / well-known
-const urls = pages.map((p) => `  <url><loc>${abs(`${p.lang}/${p.route}`)}</loc>${LANGS.map((l) => `<xhtml:link rel="alternate" hreflang="${l}" href="${abs(`${l}/${p.route}`)}"/>`).join('')}</url>`);
+const urls = pages.filter((p) => !p.noindex).map((p) => `  <url><loc>${abs(`${p.lang}/${p.route}`)}</loc>${LANGS.map((l) => `<xhtml:link rel="alternate" hreflang="${l}" href="${abs(`${l}/${p.route}`)}"/>`).join('')}</url>`);
 write('sitemap.xml', `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
 ${urls.join('\n')}

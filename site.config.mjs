@@ -9,5 +9,8 @@ export default {
   // Eigene Domain eintragen (z. B. 'novark.app'), dann wird eine CNAME-Datei erzeugt.
   cname: process.env.CNAME || '',
   email: 'novark.app@gmail.com',
+  // Postanschrift – erscheint NUR im Impressum (gesetzliche Pflicht nach § 5 DDG).
+  // Später durch eine Impressum-Service-Adresse ersetzen, wenn gewünscht.
+  address: [],
   defaultLang: 'de',
 };

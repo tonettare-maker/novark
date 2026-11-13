@@ -224,14 +224,21 @@
   // >>> HIER DIE ANGABEN DES VERANTWORTLICHEN EINTRAGEN (einmal, gilt für alle Sprachen) <<<
   var KONTAKT = {
     name: 'Tonet Tare',
-    adresse: '',
+    // Postanschrift steht nur im Impressum (gesetzlich vorgeschrieben), nicht hier
+    impressum: 'https://tonettare-maker.github.io/novark/',
     email: 'novark.app@gmail.com',
     datum: '10.11.2026',
   };
   // ==========================================================================
   function alle(sel, fn) { Array.prototype.forEach.call(document.querySelectorAll(sel), fn); }
   alle('.k-name', function (e) { e.textContent = KONTAKT.name; });
-  alle('.k-adresse', function (e) { e.textContent = KONTAKT.adresse; });
+  var ADR = { de: 'Postanschrift: siehe Impressum', en: 'Postal address: see legal notice', sq: 'Adresa postare: shih njoftimin ligjor' };
+  alle('.k-adresse', function (e) {
+    var box = e.closest('[data-lang]'), l = box ? box.getAttribute('data-lang') : 'en';
+    var a = document.createElement('a');
+    a.href = KONTAKT.impressum + l + '/impressum/'; a.textContent = ADR[l] || ADR.en; a.rel = 'noopener';
+    e.appendChild(a);
+  });
   alle('.k-datum', function (e) { e.textContent = KONTAKT.datum; });
   alle('.k-mail', function (e) { e.textContent = KONTAKT.email; e.href = 'mailto:' + KONTAKT.email; });
 
