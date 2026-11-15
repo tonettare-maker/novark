@@ -189,8 +189,14 @@ function appCard(lang, app, big = false) {
 </article>`;
 }
 
+// Video pro Sprache: app.video.byLang[lang] überschreibt src/poster/teaser (dann ohne Sprachhinweis)
+function vfor(app, lang) {
+  const b = (app.video.byLang || {})[lang];
+  return b ? { ...app.video, ...b, lang } : app.video;
+}
+
 function videoBlock(lang, app) {
-  const v = app.video, t = T[lang].video;
+  const v = vfor(app, lang), t = T[lang].video;
   return `<figure class="video-phone">
   <video controls preload="none" playsinline poster="${u(v.poster)}" width="360" height="640" aria-label="${app.name} – ${t.label}"><source src="${u(v.src)}" type="video/mp4"></video>
   ${v.lang !== lang && t.note ? `<figcaption>${t.note}</figcaption>` : ''}
@@ -262,7 +268,7 @@ ${divider}
         </div>
       </div>
       ${featured.video ? `<div class="featured-teaser"><a class="teaser-phone" href="${u(`${lang}/apps/${featured.id}/`)}#video" aria-label="${t.video.watch} – ${featured.name}">
-        <video class="teaser" data-teaser muted loop playsinline autoplay preload="metadata" poster="${u(featured.video.teaserPoster)}" width="270" height="480"><source src="${u(featured.video.teaser)}" type="video/mp4"></video>
+        <video class="teaser" data-teaser muted loop playsinline autoplay preload="metadata" poster="${u(vfor(featured, lang).teaserPoster)}" width="270" height="480"><source src="${u(vfor(featured, lang).teaser)}" type="video/mp4"></video>
         <span class="teaser-play">${playIcon}</span>
       </a></div>` : ''}
       <div class="featured-phones" aria-hidden="true"${featured.video ? ' hidden' : ''}>

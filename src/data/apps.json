@@ -13,7 +13,15 @@
       "poster": "assets/apps/familykeep/video/poster.webp",
       "teaser": "assets/apps/familykeep/video/teaser.mp4",
       "teaserPoster": "assets/apps/familykeep/video/teaser-poster.webp",
-      "lang": "de"
+      "lang": "de",
+      "byLang": {
+        "sq": {
+          "src": "assets/apps/familykeep/video/familykeep-sq.mp4",
+          "poster": "assets/apps/familykeep/video/poster-sq.webp",
+          "teaser": "assets/apps/familykeep/video/teaser-sq.mp4",
+          "teaserPoster": "assets/apps/familykeep/video/teaser-poster-sq.webp"
+        }
+      }
     },
     "testing": {
       "group": "https://groups.google.com/g/familykeep-testers",
