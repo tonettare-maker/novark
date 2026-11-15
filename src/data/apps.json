@@ -15,6 +15,12 @@
       "teaserPoster": "assets/apps/familykeep/video/teaser-poster.webp",
       "lang": "de",
       "byLang": {
+        "en": {
+          "src": "assets/apps/familykeep/video/familykeep-en.mp4",
+          "poster": "assets/apps/familykeep/video/poster-en.webp",
+          "teaser": "assets/apps/familykeep/video/teaser-en.mp4",
+          "teaserPoster": "assets/apps/familykeep/video/teaser-poster-en.webp"
+        },
         "sq": {
           "src": "assets/apps/familykeep/video/familykeep-sq.mp4",
           "poster": "assets/apps/familykeep/video/poster-sq.webp",
