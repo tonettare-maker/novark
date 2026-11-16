@@ -3,6 +3,7 @@
     "id": "familykeep",
     "name": "FamilyKeep",
     "package": "com.novark.familykeep",
+    "webUrl": "https://tonettare-maker.github.io/familykeep/",
     "status": "testing",
     "accent": "#1c7d64",
     "icon": "assets/apps/familykeep/icon-256.webp",

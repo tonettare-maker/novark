@@ -299,6 +299,10 @@ ${divider}
       ? `<a class="btn btn-play" href="${playUrl}" rel="noopener">${playIcon}<span><small>Google Play</small>${t.app.get}</span></a>`
       : `<span class="btn btn-play is-disabled" aria-disabled="true">${playIcon}<span><small>Google Play</small>${t.app.soonBtn}</span></span>`;
 
+    const webBtn = app.webUrl
+      ? `<a class="btn btn-web" href="${app.webUrl}" target="_blank" rel="noopener">${icon('globe')}<span><small>${t.app.webSmall}</small>${t.app.web}</span></a>`
+      : '';
+
     add(lang, `apps/${app.id}/`, {
       title: `${app.name} – ${app.tagline[lang]}`, desc: app.description[lang], pageClass: 'app-page',
       body: `
@@ -309,7 +313,7 @@ ${divider}
       ${statusBadge(lang, app.status)}
       <h1>${app.name}</h1>
       <p class="lead">${app.tagline[lang]}</p>
-      <div class="actions">${playBtn}</div>
+      <div class="actions">${playBtn}${webBtn}</div>${app.webUrl ? `<p class="web-note">${t.app.webNote}</p>` : ''}
     </div>
   </div>
   ${chevrons}

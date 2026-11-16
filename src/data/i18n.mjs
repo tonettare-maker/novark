@@ -36,6 +36,7 @@ export const T = {
     app: {
       features: 'Was die App kann', screens: 'Einblicke', get: 'Jetzt bei Google Play',
       soonBtn: 'Bald bei Google Play',
+      web: 'Im Browser öffnen', webSmall: 'Web-App', webNote: 'Ohne Installation, auch auf dem iPhone. Zuverlässige Erinnerungen gibt es in der Android-App.',
       testingTitle: 'Tester gesucht!',
       testingText: 'Die App ist im geschlossenen Test. Du hast ein Android-Handy und möchtest sie vorab ausprobieren? In 3 einfachen Schritten bist du dabei.',
       testingBtn: 'Tester werden', testingSubject: 'Tester für {app}',
@@ -146,6 +147,7 @@ export const T = {
     app: {
       features: 'What it does', screens: 'A closer look', get: 'Get it on Google Play',
       soonBtn: 'Coming soon to Google Play',
+      web: 'Open in browser', webSmall: 'Web app', webNote: 'No install needed, works on iPhone too. For reliable reminders, use the Android app.',
       testingTitle: 'Testers wanted!',
       testingText: "The app is in closed testing. Have an Android phone and want to try it early? You're in with 3 simple steps.",
       testingBtn: 'Become a tester', testingSubject: 'Tester for {app}',
@@ -256,6 +258,7 @@ export const T = {
     app: {
       features: 'Çfarë bën app-i', screens: 'Një vështrim nga afër', get: 'Shkarko në Google Play',
       soonBtn: 'Së shpejti në Google Play',
+      web: 'Hape në browser', webSmall: 'Web app', webNote: 'Pa instalim, edhe në iPhone. Për rikujtesa të sigurta, përdor app-in Android.',
       testingTitle: 'Kërkojmë testues!',
       testingText: 'App-i është në testim të mbyllur. Ke telefon Android dhe do ta provosh para të tjerëve? Bëhesh testues me 3 hapa të thjeshtë.',
       testingBtn: 'Bëhu testues', testingSubject: 'Testues për {app}',
